@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import requests
 from nltk.sentiment import SentimentIntensityAnalyzer
 import matplotlib.pyplot as plt
-# import matplotlib.colors as mcolors
+import matplotlib.colors as mcolors
 
 
 def convert_to_sample_link(url):
@@ -127,14 +127,14 @@ def analyze_reviews(reviews):
     axes[1].grid(True)
 
     # Pie chart for Sentiment Analysis of Review Descriptions
-    # sentiment_colors = {'Positive': 'green', 'Neutral': 'gray', 'Negative': 'lightcoral'}
-    # description_sentiment_counts.plot(kind='pie', autopct='%1.1f%%', colors=[sentiment_colors[s] for s in description_sentiment_counts.index], ax=axes[2])
-    # axes[2].set_title("Sentiment Analysis for Review Descriptions")
-    # axes[2].set_ylabel("")
-    # axes[2].legend(description_sentiment_counts.index, loc="center left", bbox_to_anchor=(1, 0, 0.5, 1))
-    # axes[2].grid(True)
+    sentiment_colors = {'Positive': 'green', 'Neutral': 'gray', 'Negative': 'lightcoral'}
+    description_sentiment_counts.plot(kind='pie', autopct='%1.1f%%', colors=[sentiment_colors[s] for s in description_sentiment_counts.index], ax=axes[2])
+    axes[2].set_title("Sentiment Analysis for Review Descriptions")
+    axes[2].set_ylabel("")
+    axes[2].legend(description_sentiment_counts.index, loc="center left", bbox_to_anchor=(1, 0, 0.5, 1))
+    axes[2].grid(True)
 
-    # st.pyplot(fig)
+    st.pyplot(fig)
 
 
     st.subheader("Top 5 Locations:")
