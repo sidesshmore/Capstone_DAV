@@ -113,7 +113,7 @@ def analyze_reviews(reviews):
     # Sentiment Analysis for Reviews
     review_sentiment_counts = pd.Series(review_sentiments).value_counts()
     axes[0].bar(review_sentiment_counts.index, review_sentiment_counts.values)
-    axes[0].set_title("Sentiment Analysis for Reviews")
+    axes[0].set_title("Sentiment Analysis for Headings")
     axes[0].set_xlabel("Sentiment")
     axes[0].set_ylabel("Count")
     axes[0].grid(True)
